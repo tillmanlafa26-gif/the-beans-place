@@ -55,6 +55,7 @@
 
 /* --- YOUR COMPONENT CODE GOES HERE --- */
 import HeroSection from "./components/HeroSection";
+import FooterSection from "./components/FooterSection";
 
 export default function App () {
   return(
@@ -64,17 +65,30 @@ export default function App () {
       {/*  hero */}
       <section className="hero bg-hero">
         <div className="hero-grid">
-          <HeroSection></HeroSection>
+          <HeroSection />
 
         </div>
       </section>
 
       {/* FEATURES / CAROUSEL */}
-      <section ClassName="features bg-features" id="shop">
+      <section className="features bg-features" id="shop"></section>
 
-      </section>
       {/* PRODUCT SHOWCASE */}
       <section className="bg-cta"></section>
+
+      {/* CTA */}
+      <section className="bg-cta"></section>
+
+      {/* About */}
+      <section className="bg-cta" id="about"></section>
+
+      {/* CONTACT */}
+      <section className="bg-cta" id="contact"></section>
+
+      {/* Footer */}
+      <section className="bg=footer">
+        <footerSection />
+      </section>
 
     </div>
   )

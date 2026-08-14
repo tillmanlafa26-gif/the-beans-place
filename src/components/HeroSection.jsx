@@ -244,7 +244,7 @@ export default function HeroSection() {
           transition={{
             duration: 0.5,
             delay: 1.2,
-            type="spring",
+            type:"spring",
             stiffness: 200
           }}>
           <span className="hero-floating-badge-label">FROM</span>
