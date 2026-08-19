@@ -60,6 +60,7 @@ import NavBar from "./components/NavBar";
 import RibbonTicker from "./components/RibbonTicker"
 import featuresSection from "./components/FeaturesSection"
 import FeaturesSection from "./components/FeaturesSection";
+import ProductShowCase from "./components/ProductShowcase";
 export default function App () {
   return(
     <div className="app">
@@ -80,7 +81,10 @@ export default function App () {
       <section className="features bg-features" id="shop"></section>
 
       {/* PRODUCT SHOWCASE */}
-      <section className="bg-cta"></section>
+      <section className="bg-cta">
+         <ProductShowCase />
+      </section>
+       
 
       {/* CTA */}
       <section className="bg-cta"></section>
