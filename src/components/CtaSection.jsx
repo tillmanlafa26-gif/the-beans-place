@@ -26,7 +26,12 @@
 //   AnimatedCounter
 
 /* --- YOUR IMPORTS GO HERE --- */
-
+import Button from "./ui/Button";
+import Badge from "./ui/Badge";
+import Separator from "./ui/Separator";
+// ScrollReveal; animates on scroll. Staggers*: animates a group one after another
+import ScrollReveal, { StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
+import AnimatedCounter from "./ui/AnimatedCounter";
 
 // STEP 2: Define the perks array (outside the component)
 // const perks = [
@@ -84,3 +89,30 @@
 //   </div>
 
 /* --- YOUR COMPONENT CODE GOES HERE --- */
+const perks = [
+    { icon: "🌱", label: "Ethically Sourced" },
+    { icon: "🔥", label: "Freshly Roasted" },
+    { icon: "🚚", label: "Free Shipping $50+" },
+    { icon: "♻️", label: "Eco-Friendly Bags" }
+];
+
+eport default function CtaSection() {
+    return (
+        <div className="cta-section">
+           <ScrollReveal animation="fade-up" delay={0}>
+            <Badge>Fresh Roasts Daily</Badge>
+           </ScrollReveal>
+           <ScrollReveal animation="fade-up" delay={0.1}>
+            <h2>Brewed With Passion, 
+                <br />
+                Delivered Fresh
+                </h2>
+           </ScrollReveal>
+           
+           {/* Decorative Divider: mx-auto center it, max-w-48 caps its width */}
+           <ScrollReveal animation="fade-in" delay={0.2}>
+            <Separator className="mx-auto mb-5 max-w-48" />
+           </ScrollReveal>
+           </div>
+    );
+}

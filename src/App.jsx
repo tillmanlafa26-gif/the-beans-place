@@ -88,7 +88,10 @@ export default function App () {
        
 
       {/* CTA */}
-      <section className="bg-cta"></section>
+      <section className="bg-cta">
+        
+        
+      </section>
 
       {/* About */}
       <section className="bg-cta" id="about">
