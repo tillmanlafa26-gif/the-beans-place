@@ -58,10 +58,11 @@ import HeroSection from "./components/HeroSection";
 import FooterSection from "./components/FooterSection";
 import NavBar from "./components/NavBar";
 import RibbonTicker from "./components/RibbonTicker"
-import featuresSection from "./components/FeaturesSection"
-import FeaturesSection from "./components/FeaturesSection";
+import FeaturesSection from "./components/FeaturesSection"
 import ProductShowCase from "./components/ProductShowcase";
 import AboutSection from "./components/AboutSection";
+import CtaSection from "./components/CtaSection";
+import ContactSection from "./components/ContactSection";
 export default function App () {
   return(
     <div className="app">
@@ -89,7 +90,7 @@ export default function App () {
 
       {/* CTA */}
       <section className="bg-cta">
-        
+        <CtaSection />
         
       </section>
 
@@ -100,7 +101,9 @@ export default function App () {
       </section>
 
       {/* CONTACT */}
-      <section className="bg-cta" id="contact"></section>
+      <section className="bg-cta" id="contact">
+        <ContactSection />
+      </section>
 
       {/* Footer */}
       <section className="bg=footer">
