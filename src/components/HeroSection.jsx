@@ -147,7 +147,7 @@ export default function HeroSection() {
           className="h1-stack"
           style={{ margin: 0, perspective: "600px" }}
           variants={textVariants}
-          intial="hidden"
+          initial="hidden"
           animate="visible">
           {/* Each <motion.span> is one animated word using "wordVariant".
                     display: "inline-block" is required so y/rotateX transform work
@@ -176,7 +176,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20}}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }} >
-          farm-to-cup single-orgin beans from Ethiopia, Columbia & beyond.
+          Farm-to-cup single-origin beans from Ethiopia, Colombia &amp; beyond.
           Freshly roasted in small batches and shipped to your door within 48 hrs.
         </motion.p>
         {/* container holding the two call-to-action buttons */}
@@ -223,7 +223,7 @@ export default function HeroSection() {
         <motion.img
           className="hero-art"
           src={heroBeans}
-          alt="Premium coffe beans"
+          alt="Premium coffee beans"
           style={{
             
             scale: imgScale, //scroll-linked shrink (safe: inside a {} JS Object)

@@ -171,7 +171,7 @@ const products = [
     }
 ];
 
-export default function ProductShowCase() {
+export default function ProductShowCase({ onAddToCart }) {
     return (
         <div className="product-showcase">
             {/* Header - rising delays build it top to bottom */}
@@ -234,9 +234,7 @@ export default function ProductShowCase() {
                                 </p>
 
                                 <p className="product-notes">{product.notes}</p>
-                                <Button variant="primary" size="sm" className="w-full mt-3">
-                                    Add to Cart
-                                </Button>
+                                <Button variant="primary" size="sm" className="w-full mt-3" onClick={() => onAddToCart(product)}>Add to Cart</Button>
                             </div>
                         </motion.div>
                     </StaggerItem>
@@ -246,3 +244,4 @@ export default function ProductShowCase() {
     );
 }
  
+

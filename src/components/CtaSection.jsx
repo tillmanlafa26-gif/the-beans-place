@@ -99,10 +99,10 @@ const perks = [
 export default function CtaSection() {
     return (
         <div className="cta-section">
-           <ScrollReveal animation="fade-up" delay={0}>
+           <ScrollReveal animation="fadeUp" delay={0}>
             <Badge>Fresh Roasts Daily</Badge>
            </ScrollReveal>
-           <ScrollReveal animation="fade-up" delay={0.1}>
+           <ScrollReveal animation="fadeUp" delay={0.1}>
             <h2>Brewed With Passion, 
                 <br />
                 Delivered Fresh
@@ -110,12 +110,12 @@ export default function CtaSection() {
            </ScrollReveal>
            
            {/* Decorative Divider: mx-auto center it, max-w-48 caps its width */}
-           <ScrollReveal animation="fade-in" delay={0.2}>
+           <ScrollReveal animation="fadeIn" delay={0.2}>
             <Separator className="mx-auto mb-5 max-w-48" />
            </ScrollReveal>
            
            
-           <ScrollReveal animation="fade-up" delay={0.2}>
+           <ScrollReveal animation="fadeUp" delay={0.2}>
                 <p className="cta-subtitle">
                     Skip the line. order premium single-origin coffee online and get it roasted to order. From our roastery to your doorstep in 1-2 buisness days.
                     </p>
@@ -132,7 +132,7 @@ export default function CtaSection() {
                         ))}
                     </StaggerContainer>
                     {/* Buttons: accent - primary action, ghost = secondary */}
-                    <ScrollReveal animation="fade-up" delay={0.5}>
+                    <ScrollReveal animation="fadeUp" delay={0.5}>
                         <div className="cta-buttons">
                             <Button variant="accent" size="lg">
                                 Order Now
@@ -144,7 +144,7 @@ export default function CtaSection() {
                     </ScrollReveal>
                     
                     {/* Stats - each counts up from 0, dividers between */}
-                    <ScrollReveal animation="fade-up" delay={0.2}>
+                    <ScrollReveal animation="fadeUp" delay={0.2}>
                         <div className="cta-stats">
                             <div className="cta-stat">
                                 <span className="cta-stat-number">

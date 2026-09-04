@@ -33,6 +33,7 @@ import { useState, useEffect } from "react";
 // useState -> remembers a value between renders; chadnging it re-draws the component
 // useEffect -> runs code AFTER the components appears on the screen
 import { motion, AnimatePresence } from "framer-motion";
+import { ShoppingBag } from "lucide-react";
 // Animation tools from Framer Motion:
 // motion -> lets us animate normal html tags (e.g. <motion.header, motion.span, motion.div, etc. )
 // motion will be underlined with a red squiggly, but just ignore it because eslint pertains to javascript and doesn't realize that we are using jsx specific items
@@ -40,7 +41,7 @@ import logo from "../assets/Beans_logo.png";
 import Button from "./ui/Button";
 
 // STEP 2: Create and export the NavBar component
-// export default function NavBar() { ... }
+// export default function NavBar({ onCartOpen, cartCount }) { ... }
 //
 // STEP 3: State variables (inside the component, before return)
 //   const [menuOpen, setMenuOpen] = useState(false);
@@ -91,7 +92,7 @@ import Button from "./ui/Button";
 
 /* --- YOUR COMPONENT CODE GOES HERE --- */
 // The navigation bar is pinned to the top of the page
-export default function NavBar() {
+export default function NavBar({ onCartOpen, cartCount }) {
     // Is the mobile drop-down menu open? Starts closed (false)
     // menuOpen = the current value; setMenuOpen = the function that chnages it
 
@@ -149,9 +150,7 @@ export default function NavBar() {
                 </nav>
 
                 {/* Desktop CTA */}
-                <Button variant="accent" size="sm" className="hidden md:inline-flex">
-                    Order Now
-                </Button>
+                <button type="button" className="cart-trigger" onClick={onCartOpen} aria-label={`Open shopping cart, ${cartCount} items`}><ShoppingBag size={19} /><span>Cart</span>{cartCount > 0 && <b>{cartCount}</b>}</button>
 
                 {/* Mobile Hamburger */}
                 {/* "md:hidden" is the opposite of the above - this button only exists on phones. aria-* attributes tell screen readers what the button does and whether the menu is currently open */}
@@ -232,3 +231,4 @@ export default function NavBar() {
     );
 }
  
+

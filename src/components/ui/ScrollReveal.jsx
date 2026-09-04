@@ -11,6 +11,15 @@ const presets = {
     slideUp: { hidden: { opacity: 0, y: 80 }, visible: { opacity: 1, y: 0 } }
 };
 
+// Keep component identities stable between renders. Creating a motion
+// component inside ScrollReveal would remount its children on every render.
+const motionElements = {
+    div: motion.div,
+    section: motion.section,
+    article: motion.article,
+    span: motion.span
+};
+
 export default function ScrollReveal({
     children,
     animation = "fadeUp",
@@ -26,7 +35,7 @@ export default function ScrollReveal({
     const isInView = useInView(ref, { once, amount });
     const preset = presets[animation] || presets.fadeUp;
 
-    const Component = motion.create(as);
+    const Component = motionElements[as] || motion.div;
 
     return (
         <Component

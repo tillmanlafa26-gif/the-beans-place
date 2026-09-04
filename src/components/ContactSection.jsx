@@ -425,7 +425,7 @@ function ContactFormInline() {
                     type="submit"
                     variant="accent"
                     size="lg"
-                    className="contactd-form-submit"
+                    className="contact-form-submit"
                     // Greyed out mid-send so nobody double submits
                     disabled={status === "sending"}>
                     {/* Label comes from 'status' : sending -> spinner, sent -> tick, otherwise the normal text */}
